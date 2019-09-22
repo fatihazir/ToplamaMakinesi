@@ -48,9 +48,10 @@ namespace ToplamaMakinesiV
                 int toplam;
 
                 toplam = Topla(Convert.ToInt32(txtBirinciSayi.Text),
-                      Convert.ToInt32(txtİkinciSayi.Text));
+                               Convert.ToInt32(txtİkinciSayi.Text));
 
-                MessageBox.Show("Toplam sonucu: " + toplam);
+                txtSonuc.Text = toplam.ToString();
+
             }
             else
             {
