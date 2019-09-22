@@ -16,6 +16,10 @@ namespace ToplamaMakinesiV
         {
             InitializeComponent();
         }
+        void LogYaz(string mesaj)
+        {
+            listView1.Items.Add(mesaj);
+        }
         void EkranHazırla()
         {
             txtBirinciSayi.Text = "0";
@@ -51,11 +55,12 @@ namespace ToplamaMakinesiV
                                Convert.ToInt32(txtİkinciSayi.Text));
 
                 txtSonuc.Text = toplam.ToString();
-
+                LogYaz("işlem başarılı. Sonuç: " + toplam);
             }
             else
             {
                 MessageBox.Show("Değerlerde bir hata var.");
+                LogYaz("işlem başarısız");
             }
            
         }
