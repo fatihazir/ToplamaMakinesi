@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace ToplamaMakinesiV
 {
-    public partial class Form1 : Form
+    public partial class FormTopla : Form
     {
-        public Form1()
+        public FormTopla()
         {
             InitializeComponent();
         }
         void EkranHazırla()
         {
-
+            txtBirinciSayi.Text = "0";
+            txtİkinciSayi.Text = "0";
+            txtBirinciSayi.Focus();
         }
         int Topla(int sayi1, int sayi2)
         {
@@ -55,9 +57,11 @@ namespace ToplamaMakinesiV
                 MessageBox.Show("Değerlerde bir hata var.");
             }
            
-            
+        }
 
-            
+        private void FormTopla_Shown(object sender, EventArgs e)
+        {
+            EkranHazırla();
         }
     }
 }

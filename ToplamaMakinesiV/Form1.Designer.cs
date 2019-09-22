@@ -1,6 +1,6 @@
 ﻿namespace ToplamaMakinesiV
 {
-    partial class Form1
+    partial class FormTopla
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -77,7 +77,7 @@
             this.btnTopla.UseVisualStyleBackColor = true;
             this.btnTopla.Click += new System.EventHandler(this.BtnTopla_Click);
             // 
-            // Form1
+            // FormTopla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,8 +87,9 @@
             this.Controls.Add(this.txtBirinciSayi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FormTopla";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.FormTopla_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
