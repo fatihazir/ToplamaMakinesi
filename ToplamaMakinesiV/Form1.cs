@@ -16,17 +16,48 @@ namespace ToplamaMakinesiV
         {
             InitializeComponent();
         }
+        void EkranHazırla()
+        {
+
+        }
+        int Topla(int sayi1, int sayi2)
+        {
+            return sayi1 + sayi2;
+        }
+        Boolean Dogrula()
+        {
+            try
+            {
+                Convert.ToInt32(txtBirinciSayi.Text);
+                Convert.ToInt32(txtİkinciSayi.Text);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            return true;
+        }
 
         private void BtnTopla_Click(object sender, EventArgs e)
         {
-            int toplam, birinciSayi, ikinciSayi;
+            if (Dogrula())
+            {
+                int toplam;
 
-            birinciSayi = Convert.ToInt32(txtBirinciSayi.Text);
-            ikinciSayi = Convert.ToInt32(txtİkinciSayi.Text);
+                toplam = Topla(Convert.ToInt32(txtBirinciSayi.Text),
+                      Convert.ToInt32(txtİkinciSayi.Text));
 
-            toplam = birinciSayi + ikinciSayi;
+                MessageBox.Show("Toplam sonucu: " + toplam);
+            }
+            else
+            {
+                MessageBox.Show("Değerlerde bir hata var.");
+            }
+           
+            
 
-            MessageBox.Show("Toplam sonucu: " + toplam);
+            
         }
     }
 }
