@@ -64,5 +64,27 @@ namespace ToplamaMakinesiV
         {
             EkranHazırla();
         }
+
+        private void TxtBirinciSayi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (
+                char.IsLetter(e.KeyChar) ||
+                char.IsSymbol(e.KeyChar) ||
+                char.IsWhiteSpace(e.KeyChar) ||
+                char.IsPunctuation(e.KeyChar)
+                )
+                e.Handled = true;
+        }
+
+        private void TxtİkinciSayi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (
+               char.IsLetter(e.KeyChar) ||
+               char.IsSymbol(e.KeyChar) ||
+               char.IsWhiteSpace(e.KeyChar) ||
+               char.IsPunctuation(e.KeyChar)
+               )
+                e.Handled = true;
+        }
     }
 }

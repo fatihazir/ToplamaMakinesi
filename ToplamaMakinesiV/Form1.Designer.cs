@@ -30,13 +30,13 @@
         {
             this.tabToplama = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSonuc = new System.Windows.Forms.TextBox();
             this.btnTopla = new System.Windows.Forms.Button();
             this.txtİkinciSayi = new System.Windows.Forms.TextBox();
             this.txtBirinciSayi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSonuc = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabToplama.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,23 @@
             this.tabPage1.Text = "Toplama";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Sonuç";
+            // 
+            // txtSonuc
+            // 
+            this.txtSonuc.Location = new System.Drawing.Point(124, 174);
+            this.txtSonuc.Name = "txtSonuc";
+            this.txtSonuc.ReadOnly = true;
+            this.txtSonuc.Size = new System.Drawing.Size(222, 22);
+            this.txtSonuc.TabIndex = 10;
+            // 
             // btnTopla
             // 
             this.btnTopla.Location = new System.Drawing.Point(160, 116);
@@ -84,6 +101,7 @@
             this.txtİkinciSayi.Name = "txtİkinciSayi";
             this.txtİkinciSayi.Size = new System.Drawing.Size(222, 22);
             this.txtİkinciSayi.TabIndex = 8;
+            this.txtİkinciSayi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtİkinciSayi_KeyPress);
             // 
             // txtBirinciSayi
             // 
@@ -91,6 +109,7 @@
             this.txtBirinciSayi.Name = "txtBirinciSayi";
             this.txtBirinciSayi.Size = new System.Drawing.Size(222, 22);
             this.txtBirinciSayi.TabIndex = 7;
+            this.txtBirinciSayi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBirinciSayi_KeyPress);
             // 
             // label2
             // 
@@ -109,23 +128,6 @@
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Birinci Sayi";
-            // 
-            // txtSonuc
-            // 
-            this.txtSonuc.Location = new System.Drawing.Point(124, 174);
-            this.txtSonuc.Name = "txtSonuc";
-            this.txtSonuc.ReadOnly = true;
-            this.txtSonuc.Size = new System.Drawing.Size(222, 22);
-            this.txtSonuc.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Sonuç";
             // 
             // FormTopla
             // 
